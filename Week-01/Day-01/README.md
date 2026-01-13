@@ -14,9 +14,6 @@ Welcome to Day 1 of your 20-day high school remote internship program! Today mar
 - **10:00 AM - 11:00 AM**: Development Environment Setup
 - **11:00 AM - 12:00 PM**: Introduction to Version Control (Git)
 - **12:00 PM - 1:00 PM**: Lunch Break
-- **1:00 PM - 2:30 PM**: Team Meeting & Ice Breakers
-- **2:30 PM - 3:30 PM**: Overview of Week 1 Projects
-- **3:30 PM - 4:00 PM**: Q&A and Wrap-up
 
 ## Resources
 - [Git Documentation](https://git-scm.com/doc)
