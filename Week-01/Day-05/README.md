@@ -1,7 +1,7 @@
 # Day 05 - Week 01
 
 ## Overview
-Welcome to Day 5 of your internship program.
+Welcome to Day 05 of your internship program.
 
 ## Goals for Today
 - [To be filled in]

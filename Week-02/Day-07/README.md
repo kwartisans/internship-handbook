@@ -1,7 +1,7 @@
 # Day 07 - Week 02
 
 ## Overview
-Welcome to Day 7 of your internship program.
+Welcome to Day 07 of your internship program.
 
 ## Goals for Today
 - [To be filled in]

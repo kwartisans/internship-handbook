@@ -1,7 +1,7 @@
 # Day 06 - Week 02
 
 ## Overview
-Welcome to Day 6 of your internship program.
+Welcome to Day 06 of your internship program.
 
 ## Goals for Today
 - [To be filled in]

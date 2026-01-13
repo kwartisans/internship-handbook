@@ -1,7 +1,7 @@
 # Day 09 - Week 02
 
 ## Overview
-Welcome to Day 9 of your internship program.
+Welcome to Day 09 of your internship program.
 
 ## Goals for Today
 - [To be filled in]

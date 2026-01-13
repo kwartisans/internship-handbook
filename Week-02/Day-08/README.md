@@ -1,7 +1,7 @@
 # Day 08 - Week 02
 
 ## Overview
-Welcome to Day 8 of your internship program.
+Welcome to Day 08 of your internship program.
 
 ## Goals for Today
 - [To be filled in]

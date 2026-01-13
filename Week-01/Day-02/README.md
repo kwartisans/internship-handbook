@@ -1,7 +1,7 @@
 # Day 02 - Week 01
 
 ## Overview
-Welcome to Day 2 of your internship program.
+Welcome to Day 02 of your internship program.
 
 ## Goals for Today
 - [To be filled in]

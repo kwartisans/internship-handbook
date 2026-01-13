@@ -77,7 +77,7 @@ EOF
 # Day $(printf "%02d" "$day_number") - Week $(printf "%02d" "$week")
 
 ## Overview
-Welcome to Day $day_number of your internship program.
+Welcome to Day $(printf "%02d" "$day_number") of your internship program.
 
 ## Goals for Today
 - [To be filled in]
