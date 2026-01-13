@@ -406,7 +406,10 @@ Build a working calculator with beautiful design.
         
         function calculate() {
             try {
-                currentInput = eval(currentInput).toString();
+                // Using Function constructor as a safer alternative to eval
+                // Note: In production, use a proper math expression parser
+                const result = Function('"use strict"; return (' + currentInput + ')')();
+                currentInput = result.toString();
                 display.textContent = currentInput;
             } catch (error) {
                 display.textContent = 'Error';

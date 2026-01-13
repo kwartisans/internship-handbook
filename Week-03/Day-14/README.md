@@ -185,12 +185,12 @@ Practice merging them one by one into main.
 
 ### Step 1: Fork a Repository
 
-1. Go to: https://github.com/kwartisans/internship-practice
+1. Find a practice repository on GitHub (ask your mentor for the URL)
 2. Click "Fork" to create your copy
 3. Clone your fork:
 ```bash
-git clone https://github.com/YOUR-USERNAME/internship-practice.git
-cd internship-practice
+git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
+cd REPO-NAME
 ```
 
 ### Step 2: Create Feature Branch
