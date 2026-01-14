@@ -15,9 +15,9 @@ This intensive program transforms you from a beginner to someone capable of buil
 
 ---
 
-## 📅 Complete Internship Roadmap
+##  Complete Internship Roadmap
 
-### 🔰 [Week 01: Fundamentals & Development Environment](Week-01/README.md) (Days 01-05)
+###  [Week 01: Fundamentals & Development Environment](Week-01/README.md) (Days 01-05)
 
 **Theme**: Building Your Engineering Foundation
 
@@ -38,11 +38,11 @@ By Friday, you'll have built a complete data pipeline:
 
 **Why This Matters**: Week 1 creates the technical foundation for everything ahead. The data pipeline you build mirrors real-world engineering and prepares you for ML data handling.
 
-📖 [Start Week 1 →](Week-01/README.md)
+ [Start Week 1 →](Week-01/README.md)
 
 ---
 
-### 🤖 [Week 02: Machine Learning, Mobile Development & Real-World Projects](Week-02/README.md) (Days 06-10)
+###  [Week 02: Machine Learning, Mobile Development & Real-World Projects](Week-02/README.md) (Days 06-10)
 
 **Theme**: Exposure to Modern Technologies & Professional Codebases
 
@@ -62,11 +62,11 @@ By Friday, you'll have built a complete data pipeline:
 
 **Why This Matters**: Week 2 bridges your backend skills from Week 1 with the practical applications you'll need for Week 4's ML project. Understanding how professionals structure projects guides your own development.
 
-📖 [Explore Week 2 →](Week-02/README.md)
+ [Explore Week 2 →](Week-02/README.md)
 
 ---
 
-### 🌐 [Week 03: Web Development Fundamentals & Vibe Coding](Week-03/README.md) (Days 11-15)
+###  [Week 03: Web Development Fundamentals & Vibe Coding](Week-03/README.md) (Days 11-15)
 
 **Theme**: Building Interactive Web Applications
 
@@ -89,11 +89,11 @@ By Friday, you'll have built a complete data pipeline:
 
 **Why This Matters**: Web skills allow you to create user interfaces for your ML project in Week 4. The portfolio website becomes your professional presence for employers and universities.
 
-📖 [Build with Week 3 →](Week-03/README.md)
+ [Build with Week 3 →](Week-03/README.md)
 
 ---
 
-### 🚀 [Week 04: Final Project - Machine Learning Application](Week-04/README.md) (Days 16-20)
+###  [Week 04: Final Project - Machine Learning Application](Week-04/README.md) (Days 16-20)
 
 **Theme**: Complete ML Project from Concept to Delivery
 
@@ -134,11 +134,11 @@ By Friday, you'll have built a complete data pipeline:
 
 **Why This Matters**: This is your capstone project—demonstrating everything you've learned. It's a portfolio piece showcasing your ability to deliver a complete, production-ready application.
 
-📖 [Final Challenge →](Week-04/README.md)
+ [Final Challenge →](Week-04/README.md)
 
 ---
 
-## 🎓 Learning Philosophy
+##  Learning Philosophy
 
 This internship follows a **progressive mastery model**:
 
@@ -157,7 +157,7 @@ This internship follows a **progressive mastery model**:
 
 ---
 
-## 💻 Technologies & Skills You'll Master
+##  Technologies & Skills You'll Master
 
 ### Development Tools
 - Git & GitHub (version control and collaboration)
@@ -190,7 +190,7 @@ This internship follows a **progressive mastery model**:
 
 ---
 
-## 📊 Program Structure
+##  Program Structure
 
 This 20-day remote internship program is organized into 4 weeks, with 5 days per week:
 
@@ -211,7 +211,7 @@ Each day has its own folder with a comprehensive README.md containing:
 
 ---
 
-## 🌟 Success Tips for the Entire Program
+##  Success Tips for the Entire Program
 
 1. **Show Up Every Day**: Consistency is more important than perfection
 2. **Ask Questions Early**: Use Discord and mentors—no question is too basic
@@ -226,7 +226,7 @@ Each day has its own folder with a comprehensive README.md containing:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Basic computer literacy
@@ -247,7 +247,7 @@ Each day has its own folder with a comprehensive README.md containing:
 
 ---
 
-## 📖 Essential Resources
+##  Essential Resources
 
 ### Community & Support
 - **Discord Community**: [https://discord.gg/rrj8WxYp](https://discord.gg/rrj8WxYp)
@@ -266,22 +266,22 @@ Each day has its own folder with a comprehensive README.md containing:
 
 ---
 
-## 🏆 What You'll Accomplish
+##  What You'll Accomplish
 
 By the end of this internship, you will have:
 
-✅ **Built a complete data pipeline** (PHP → Database → API)  
-✅ **Explored machine learning** fundamentals and real-world applications  
-✅ **Created a personal portfolio website** deployed on GitHub Pages  
-✅ **Delivered a production ML application** with full documentation  
-✅ **Mastered Git/GitHub** workflows for professional collaboration  
-✅ **Developed problem-solving skills** through 20+ algorithmic challenges  
-✅ **Gained experience** with 10+ technologies and frameworks  
-✅ **Created a professional portfolio** showcasing your work  
+ **Built a complete data pipeline** (PHP → Database → API)  
+ **Explored machine learning** fundamentals and real-world applications  
+ **Created a personal portfolio website** deployed on GitHub Pages  
+ **Delivered a production ML application** with full documentation  
+ **Mastered Git/GitHub** workflows for professional collaboration  
+ **Developed problem-solving skills** through 20+ algorithmic challenges  
+ **Gained experience** with 10+ technologies and frameworks  
+ **Created a professional portfolio** showcasing your work  
 
 ---
 
-## 📋 Setup Script
+## Setup Script
 
 We've included a Bash script to set up the directory structure. If you need to recreate or set up the structure elsewhere, you can use:
 
