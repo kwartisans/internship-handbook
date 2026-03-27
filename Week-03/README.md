@@ -44,6 +44,16 @@ Each day is structured for **8 hours of intensive learning**:
 
 ---
 
+## 🧩 Weekly LeetCode Challenge
+
+**Problem (Easy):** [Reverse String](https://leetcode.com/problems/reverse-string/)
+
+> Write a function that reverses a string in place. The input is given as an array of characters `s`.
+
+This problem reinforces in-place array manipulation and two-pointer technique — useful when building interactive JavaScript features.
+
+---
+
 ## 📖 Curated Learning Resources
 
 ### YouTube Courses

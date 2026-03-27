@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src * 'self' data: https: file:; script-src * 'unsafe-inline'; style-src * 'unsafe-inline' https: file:; font-src * https: file:;">
+    <title>Markdown: Rich Preview</title>
+    <link rel="stylesheet" href="file:///c%3A%5CUsers%5CUSER%201%5C.vscode%5Cextensions%5Cnur-srijan.markdown-rich-preview-1.2.0%5Cassets%5Cvendor/highlight/styles/github-dark.min.css" onerror="console.error('Failed to load Highlight.js CSS:', this.href)">
+    <link rel="stylesheet" href="file:///c%3A%5CUsers%5CUSER%201%5C.vscode%5Cextensions%5Cnur-srijan.markdown-rich-preview-1.2.0%5Cassets%5Cvendor/katex/katex.min.css" onerror="console.error('Failed to load KaTeX CSS:', this.href)">
+    <script>
+        // Highlighting is done on the extension side during markdown parsing.
+        // No browser-side initialization of highlight.js is needed.
+
+        // Copy to clipboard function
+        function copyToClipboard(button) {
+            const codeBlock = button.closest('.code-block');
+            const code = codeBlock.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.backgroundColor = '#4CAF50';
+                button.style.color = 'white';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.backgroundColor = '';
+                    button.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+    <style>
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+        img.emoji {
+            height: 1em;
+            width: 1em;
+            margin: 0 .05em 0 .1em;
+            vertical-align: -0.1em;
+            display: inline;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            line-height: 1.25;
+        }
+        h1 { 
+            font-size: 2em; 
+            border-bottom: 1px solid #eaecef; 
+            padding-bottom: 0.3em;
+            margin-top: 0.67em 0;
+        }
+        h2 { 
+            font-size: 1.5em; 
+            border-bottom: 1px solid #eaecef; 
+            padding-bottom: 0.3em;
+            margin-top: 1.5em;
+        }
+        h3 { 
+            font-size: 1.25em; 
+            margin-top: 1.25em;
+        }
+        h4 { 
+            font-size: 1em; 
+            margin-top: 1em;
+        }
+        a { 
+            color: #0366d6; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        strong { 
+            font-weight: 600; 
+        }
+        pre {
+            background-color:rgb(9, 7, 10);
+            overflow: auto;
+            margin: 0;
+        }
+        code {
+            font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+            padding: 0.2em 0.4em;
+            font-size: 90%;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        .code-block {
+            position: relative;
+            background-color:rgb(9, 7, 10);
+            border-radius: 6px;
+            margin: 1em 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 10px;
+            background-color:rgb(32, 30, 43);
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        .language {
+            color: #efe9e9;
+            font-size: 0.9em;
+            font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        .copy-button {
+            padding: 4px 8px;
+            font-size: 0.9em;
+            color: #efe9e9;
+            background-color: transparent;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-button:hover {
+            background-color: #e9e9e9;
+            border-color: #ccc;
+        }
+        blockquote {
+            margin: 0;
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 0.25em solid #dfe2e5;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            overflow: auto;
+            margin-bottom: 16px;
+        }
+        table th {
+            font-weight: 600;
+        }
+        table th, table td {
+            padding: 6px 13px;
+            border: 1px solid var(--vscode-editorGroup-border, #dfe2e5);
+        }
+        table tr {
+            background-color: var(--vscode-editor-background, #fff);
+            border-top: 1px solid var(--vscode-editorGroup-border, #c6cbd1);
+        }
+        table tr:nth-child(2n) {
+            background-color: var(--vscode-list-hoverBackground, #f6f8fa);
+        }
+        img {
+            max-width: 100%;
+            box-sizing: content-box;
+        }
+        /* GitHub-style Alerts */
+        .markdown-alert {
+            padding: 0.25rem 1rem;
+            margin-bottom: 1rem;
+            color: inherit;
+            border-left: 0.25em solid #dfe2e5;
+            border-radius: 6px;
+        }
+        .markdown-alert-title {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            line-height: 1;
+        }
+        .markdown-alert-title svg {
+            margin-right: 8px;
+        }
+        .markdown-alert-note { border-left-color: #0969da; }
+        .markdown-alert-note .markdown-alert-title { color: #0969da; }
+        .markdown-alert-tip { border-left-color: #1a7f37; }
+        .markdown-alert-tip .markdown-alert-title { color: #1a7f37; }
+        .markdown-alert-important { border-left-color: #8250df; }
+        .markdown-alert-important .markdown-alert-title { color: #8250df; }
+        .markdown-alert-warning { border-left-color: #9a6700; }
+        .markdown-alert-warning .markdown-alert-title { color: #9a6700; }
+        .markdown-alert-caution { border-left-color: #d1242f; }
+        .markdown-alert-caution .markdown-alert-title { color: #d1242f; }
+
+        /* Footnotes */
+        .footnotes {
+            font-size: 12px;
+            color: #6a737d;
+            border-top: 1px solid #dfe2e5;
+            margin-top: 24px;
+        }
+        .footnotes ol {
+            padding-left: 16px;
+        }
+        .footnote-backref {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin-left: 4px;
+        }
+
+        /* Task Lists */
+        ul.contains-task-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .task-list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+        .task-list-item input[type="checkbox"] {
+            margin: 0.25em 0.5em 0 0;
+            vertical-align: middle;
+        }
+
+        /* Front Matter */
+        .front-matter {
+            margin-bottom: 24px;
+            border: 1px solid var(--vscode-editorGroup-border, #dfe2e5);
+            border-radius: 6px;
+            padding: 12px;
+            background-color: var(--vscode-list-hoverBackground, #f6f8fa);
+        }
+        .front-matter table {
+            margin-bottom: 0;
+            border: none;
+        }
+        .front-matter table tr {
+            background-color: transparent;
+            border: none;
+        }
+        .front-matter table td {
+            border: none;
+            padding: 4px 8px;
+        }
+        .front-matter-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: var(--vscode-descriptionForeground, #6a737d);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="day-01---welcome-to-the-internship-program">Day 01 - Welcome to the Internship Program</h1>
+<h2 id="welcome-message-from-engineering-manager">Welcome Message from Engineering Manager</h2>
+<p>Welcome to our software engineering internship program! We are thrilled to have you join our team for this exciting 20-day journey. This program is designed to give you hands-on experience with real-world development practices and tools that professional engineers use every day.</p>
+<p>As this is a remote internship, strong version control skills and self-discipline are essential. We've structured today to help you build a solid foundation. Remember, every expert was once a beginner—don't hesitate to ask questions and reach out to your mentors whenever you need support.</p>
+<p>Looking forward to seeing what you'll build!</p>
+<p>Best regards,<br /><strong>Engineering Manager</strong></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>Welcome to Day 1 of your 20-day high school remote internship program! Today marks the beginning of your journey into software engineering.</p>
+<h2 id="goals-for-today">Goals for Today</h2>
+<ul>
+<li>Get familiar with the internship structure</li>
+<li>Complete prerequisite training on Git and GitHub</li>
+<li>Set up your development environment</li>
+<li>Join the community channels</li>
+<li>Meet your team and mentors</li>
+<li>Understand the program expectations</li>
+</ul>
+<h2 id="schedule">Schedule</h2>
+<h3 id="800-am---900-am-welcome--orientation"><strong>8:00 AM - 9:00 AM</strong>: Welcome &amp; Orientation</h3>
+<ul>
+<li>Review program overview and expectations</li>
+<li>Introduction to mentors and team members</li>
+</ul>
+<h3 id="900-am---1030-am-prerequisite-training---version-control"><strong>9:00 AM - 10:30 AM</strong>: Prerequisite Training - Version Control</h3>
+<p>As our internship is remote-based, it requires intensive knowledge of version control. To help you feel confident before you start, please complete the following prerequisite training for GitHub and Git:</p>
+<ul>
+<li><strong>GitHub Overview</strong>: <a href="https://www.youtube.com/watch?v=pBy1zgt0XPc">Watch Video</a> (15 minutes)</li>
+<li><strong>GitHub Tutorial</strong>: <a href="https://www.youtube.com/watch?v=iv8rSLsi1xo">Watch Video</a> (30 minutes)</li>
+<li><strong>Git Tutorial</strong>: <a href="https://www.youtube.com/watch?v=mJ-qvsxPHpY">Watch Video</a> (30 minutes)</li>
+</ul>
+<h3 id="1030-am---1130-am-development-environment-setup"><strong>10:30 AM - 11:30 AM</strong>: Development Environment Setup</h3>
+<ul>
+<li>Install necessary tools and software</li>
+<li>Configure your development environment</li>
+<li>Test your setup with a simple project</li>
+</ul>
+<h3 id="1130-am---1230-pm-hands-on-practice"><strong>11:30 AM - 12:30 PM</strong>: Hands-On Practice</h3>
+<ul>
+<li>Create your first GitHub repository</li>
+<li>Practice basic Git commands</li>
+<li>Make your first commit and push</li>
+</ul>
+<h3 id="1230-pm---100-pm-community-onboarding"><strong>12:30 PM - 1:00 PM</strong>: Community Onboarding</h3>
+<ul>
+<li>Join our Discord community: <a href="https://discord.gg/rrj8WxYp">https://discord.gg/rrj8WxYp</a></li>
+<li>Introduce yourself in the team channels</li>
+<li>Get familiar with communication protocols</li>
+</ul>
+<h3 id="100-pm---200-pm-lunch-break"><strong>1:00 PM - 2:00 PM</strong>: Lunch Break</h3>
+<h2 id="tasks-to-complete-today">Tasks to Complete Today</h2>
+<h3 id="-required-tasks">✅ Required Tasks</h3>
+<ol>
+<li><strong>Join Discord Community</strong>: <a href="https://discord.gg/rrj8WxYp">https://discord.gg/rrj8WxYp</a></li>
+<li><strong>Complete Prerequisite Training</strong>:<ul>
+<li>GitHub Overview video</li>
+<li>GitHub Tutorial video</li>
+<li>Git Tutorial video</li>
+</ul>
+</li>
+<li><strong>Development Environment Setup</strong>:<ul>
+<li>Install Git</li>
+<li>Install a code editor (VS Code recommended)</li>
+<li>Configure Git with your name and email</li>
+</ul>
+</li>
+<li><strong>GitHub Practice</strong>:<ul>
+<li>Create your first GitHub repository</li>
+<li>Make at least 3 commits</li>
+<li>Practice pushing and pulling changes</li>
+</ul>
+</li>
+<li><strong>Introduce Yourself</strong>:<ul>
+<li>Post an introduction in the Discord channel</li>
+<li>Share your background and what you hope to learn</li>
+</ul>
+</li>
+</ol>
+<h3 id="-recommended-optional">💡 Recommended (Optional)</h3>
+<ul>
+<li>Start solving problems on LeetCode to increase your technical readiness: <a href="https://leetcode.com/problemset/">https://leetcode.com/problemset/</a></li>
+<li>Explore GitHub's interface and features</li>
+<li>Review additional Git resources</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://git-scm.com/doc">Git Documentation</a></li>
+<li><a href="https://guides.github.com/">GitHub Guides</a></li>
+<li><a href="https://discord.gg/rrj8WxYp">Discord Community</a></li>
+<li><a href="https://leetcode.com/problemset/">LeetCode Problem Set</a></li>
+</ul>
+<h2 id="getting-help">Getting Help</h2>
+<p>Please reach out to your mentor if you have any questions or need assistance! We're here to support you throughout this journey.</p>
+<p><strong>Important</strong>: Don't hesitate to ask questions in the Discord community—your peers and mentors are here to help!</p>
+
+</body>
+</html>

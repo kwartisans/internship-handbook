@@ -138,6 +138,35 @@ By Friday, you'll have built a complete data pipeline:
 
 ---
 
+###  [Week 05: Discord Bot Development & Data Protection Policy](Week-05/README.md) (Days 21-25)
+
+**Theme**: Building Real-Time Applications & Responsible Engineering
+
+**What You'll Learn:**
+- Register and configure a Discord bot using the Discord Developer Portal
+- Build slash commands, event listeners, and embedded messages with Discord.js (Node.js)
+- Deploy a persistent bot to a cloud hosting platform
+- Study Rwanda's NCSA data protection framework (Law No. 058/2021)
+- Apply data protection principles to your own software projects
+- Write a compliant `DATA_PROTECTION.md` document for your bot
+
+**Week 5 Milestones:**
+
+**Milestone 1 — Discord Bot Programming:**
+- Day 21: Discord API setup, bot registration, first connection
+- Day 22: Slash commands (`/ping`, `/hello`, `/help`) and event listeners
+- Day 23: Advanced features (`/serverinfo`, cooldowns) and cloud deployment
+
+**Milestone 2 — NCSA Data Protection Policy:**
+- Day 24: Deep dive into Rwanda's Law No. 058/2021 and the 8 NCSA data protection principles
+- Day 25: Compliance self-audit, `DATA_PROTECTION.md` completion, and final presentation
+
+**Why This Matters**: Every professional software engineer must understand both how to build real-time, event-driven applications and how to handle user data responsibly. This week bridges technical skills with legal and ethical responsibilities.
+
+ [Start Week 5 →](Week-05/README.md)
+
+---
+
 ##  Learning Philosophy
 
 This internship follows a **progressive mastery model**:
@@ -146,6 +175,7 @@ This internship follows a **progressive mastery model**:
 2. **Week 2**: **Exploration** - Exposure to ML, mobile, and professional practices
 3. **Week 3**: **Creation** - Building interactive applications with web technologies
 4. **Week 4**: **Integration** - Combining all skills into a complete ML project
+5. **Week 5**: **Responsibility** - Building event-driven bots and applying data protection law
 
 **Key Principles:**
 - **Hands-on Learning**: Code every day, learn by doing
@@ -200,6 +230,7 @@ This 20-day remote internship program is organized into 4 weeks, with 5 days per
 | **Week 02** | 06-10 | ML & Mobile Exposure | Real-World Project Analysis |
 | **Week 03** | 11-15 | Web Development | Personal Portfolio Website |
 | **Week 04** | 16-20 | Final ML Project | Production ML Application |
+| **Week 05** | 21-25 | Discord Bot & Data Protection | Deployed Bot + Compliance Document |
 
 Each day has its own folder with a comprehensive README.md containing:
 - Daily schedule and timeline
@@ -244,6 +275,7 @@ Each day has its own folder with a comprehensive README.md containing:
 - **Weeks 1-2**: 6-8 hours per day
 - **Week 3**: 8 hours per day (intensive)
 - **Week 4**: 8-10 hours per day (final project)
+- **Week 5**: 6-8 hours per day (bot development + policy study)
 
 ---
 
@@ -274,8 +306,10 @@ By the end of this internship, you will have:
  **Explored machine learning** fundamentals and real-world applications  
  **Created a personal portfolio website** deployed on GitHub Pages  
  **Delivered a production ML application** with full documentation  
+ **Built and deployed a Discord bot** with slash commands and event handling  
+ **Applied NCSA data protection principles** and written a compliance document  
  **Mastered Git/GitHub** workflows for professional collaboration  
- **Developed problem-solving skills** through 20+ algorithmic challenges  
+ **Developed problem-solving skills** through 25+ algorithmic challenges  
  **Gained experience** with 10+ technologies and frameworks  
  **Created a professional portfolio** showcasing your work  
 
