@@ -53,6 +53,16 @@ Build a simulator that estimates a credit score for informal workers using:
 
 ---
 
+## 🧩 Weekly LeetCode Challenge
+
+**Problem (Easy):** [FizzBuzz](https://leetcode.com/problems/fizz-buzz/)
+
+> Given an integer `n`, return a string array where for each `i` from `1` to `n`: output `"FizzBuzz"` if divisible by 3 and 5, `"Fizz"` if divisible by 3, `"Buzz"` if divisible by 5, or the number itself as a string.
+
+This classic problem builds conditional logic and iteration skills — the same structured thinking required for designing ML decision rules.
+
+---
+
 ## 📚 Essential Learning Resources
 
 **Before you start, watch these tutorials:**

@@ -126,6 +126,16 @@ Each day follows this structure:
 
 ---
 
+## 🧩 Weekly LeetCode Challenge
+
+**Problem (Easy):** [Two Sum](https://leetcode.com/problems/two-sum/)
+
+> Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
+
+This problem reinforces array traversal and hash map usage — core concepts for backend data handling.
+
+---
+
 ## 📖 Essential Resources
 
 ### Version Control

@@ -132,6 +132,16 @@ Each day follows this structure:
 
 ---
 
+## 🧩 Weekly LeetCode Challenge
+
+**Problem (Easy):** [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+> You are given an array `prices` where `prices[i]` is the price of a stock on day `i`. Return the maximum profit you can achieve from a single buy-sell transaction, or `0` if no profit is possible.
+
+This problem strengthens array traversal and greedy thinking — skills applicable to data analysis you'll see in machine learning pipelines.
+
+---
+
 ## 📖 Essential Resources
 
 ### Machine Learning
