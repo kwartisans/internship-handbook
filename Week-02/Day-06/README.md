@@ -49,7 +49,7 @@ Machine learning is transforming industries worldwide, and understanding its bas
    - Example: Robotics
 
 **Watch:**
-- [Machine Learning for Everybody - Full Course](https://www.youtube.com/watch?v=S6iuhdYsGC8) (First 2 hours)
+- [Machine Learning for Everybody - Full Course](https://www.youtube.com/watch?v=SIEaLBXr0rk&t=3980s) (First 2 hours)
 
 ---
 
@@ -92,7 +92,7 @@ Create a simple Python script to explore a CSV dataset:
 - Visualize data with simple plots
 
 **Tutorial to Follow:**
-- [Python for Data Science - Pandas Tutorial](https://www.youtube.com/watch?v=vmEHCJofslg) (First 30 minutes)
+- [Python for Data Science - Pandas Tutorial](https://www.youtube.com/watch?v=SIEaLBXr0rk&t=3980s) (First 30 minutes)
 
 ---
 
